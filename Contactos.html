@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VITALIA | Contactos</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* =========================
+           GENERAL
+        ========================= */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ECE9E4;
+            color: #333;
+        }
+
+        /* =========================
+           ENCABEZADO
+        ========================= */
+      
+
+       header{
+    background:#F4B39A;
+    padding:30px;
+    text-align:center;
+    position:relative;
+}
+
+header h1 img{
+    margin-left:620px;
+    color:white;
+    font-size:250px;
+    letter-spacing:5px;
+}
+
+header p{
+    margin-top:70px;
+    font-style:italic;
+    color:white;
+    font-size:18px;
+}
+
+header img{
+    position:absolute;
+    top:-10px;
+    left:70px;
+    width:200px;
+}
+
+
+        /* =========================
+           MENÚ
+        ========================= */
+        nav {
+            background: #A95C59;
+            padding: 15px 10px;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            margin: 5px 12px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #F4B39A;
+        }
+
+        /* =========================
+           TÍTULO PRINCIPAL
+        ========================= */
+        .titulo {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        .titulo h2 {
+            color: #A95C59;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .titulo p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* =========================
+           ENCARGADAS
+        ========================= */
+        .encargadas {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .encargadas h2 {
+            color: #A95C59;
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .tarjetas-contacto {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tarjeta-contacto {
+            background: white;
+            width: 250px;
+            min-height: 390px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .tarjeta-contacto:hover {
+            transform: translateY(-7px);
+        }
+
+        .tarjeta-contacto img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #F4B39A;
+        }
+
+        .tarjeta-contacto h3 {
+            color: #A95C59;
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .tarjeta-contacto p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* =========================
+           UBICACIÓN
+        ========================= */
+        .ubicacion {
+            background: #F4B39A;
+            padding: 45px 20px;
+            margin-top: 30px;
+        }
+
+        .ubicacion h2 {
+            color: white;
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .mapa {
+            max-width: 900px;
+            height: 400px;
+            margin: auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        .mapa iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* =========================
+           ENCUESTA
+        ========================= */
+        .encuesta {
+            max-width: 750px;
+            margin: 50px auto;
+            padding: 30px 20px;
+        }
+
+        .encuesta h2 {
+            color: #A95C59;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .encuesta > p {
+            text-align: center;
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .formulario {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .formulario table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 10px 15px;
+        }
+
+        .formulario td {
+            vertical-align: top;
+        }
+
+        .formulario label {
+            display: block;
+            color: #A95C59;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+
+        .formulario input[type="text"],
+        .formulario input[type="number"],
+        .formulario input[type="email"],
+        .formulario textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            border: 2px solid #F4B39A;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            color: #333;
+            background: #FFFCFA;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .formulario input:focus,
+        .formulario textarea:focus {
+            border-color: #A95C59;
+            box-shadow: 0 0 5px rgba(169, 92, 89, 0.2);
+        }
+
+        .formulario textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        .formulario input[type="text"]::placeholder,
+        .formulario input[type="number"]::placeholder,
+        .formulario input[type="email"]::placeholder,
+        .formulario textarea::placeholder {
+            color: #999;
+        }
+
+        /* =========================
+           BOTONES DE LA ENCUESTA
+        ========================= */
+        .formulario input[type="submit"],
+        .formulario input[type="reset"] {
+            background: #A95C59;
+            color: white;
+            border: none;
+            padding: 13px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .formulario input[type="submit"]:hover,
+        .formulario input[type="reset"]:hover {
+            background: #F4B39A;
+        }
+
+        /* =========================
+           VOLVER AL INICIO
+        ========================= */
+        .regresar {
+            text-align: center;
+            padding: 20px 20px 40px;
+        }
+
+        .regresar a {
+            display: inline-block;
+            background: #A95C59;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .regresar a:hover {
+            background: #F4B39A;
+        }
+
+        /* =========================
+           PIE DE PÁGINA
+        ========================= */
+        footer {
+            background: #A95C59;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* =========================
+           DISEÑO PARA CELULARES
+        ========================= */
+        @media (max-width: 600px) {
+            header {
+                padding: 25px 15px;
+            }
+
+            header .logo {
+                position: static;
+                display: block;
+                width: 65px;
+                margin: 0 auto 10px;
+            }
+
+            header h1 img {
+                width: 160px;
+            }
+
+            nav a {
+                margin: 8px;
+                font-size: 14px;
+            }
+
+            .titulo h2 {
+                font-size: 32px;
+            }
+
+            .encargadas h2,
+            .ubicacion h2 {
+                font-size: 27px;
+            }
+
+            .tarjeta-contacto {
+                width: 100%;
+                max-width: 320px;
+            }
+
+            .mapa {
+                height: 320px;
+            }
+
+            .encuesta h2 {
+                font-size: 30px;
+            }
+
+            .formulario {
+                padding: 15px;
+            }
+
+            .formulario table,
+            .formulario tbody,
+            .formulario tr,
+            .formulario td {
+                display: block;
+                width: 100%;
+            }
+
+            .formulario td {
+                padding: 3px 0;
+            }
+
+            .formulario input[type="submit"],
+            .formulario input[type="reset"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img class="logo" src="LOGUITO.png" alt="Logo de VITALIA">
+        <h1>
+            <img src="VITA.png" alt="VITALIA">
+        </h1>
+        <p>"El arte de cuidarte"</p>
+    </header>
+
+    <nav>
+        <a href="Vitalia.html">Inicio</a>
+        <a href="cuidado.html">Cuidado Personal</a>
+        <a href="bienestar.html">Bienestar</a>
+        <a href="Vida saludable.html">Vida Saludable</a>
+        <a href="Contactos.html">Contactos</a>
+    </nav>
+
+    <section class="titulo">
+        <h2>Contactos</h2>
+        <p>Conoce a las encargadas del proyecto VITALIA, nuestra ubicación y déjanos conocer tu opinión.</p>
+    </section>
+
+    <section class="encargadas">
+        <h2>Encargadas del proyecto</h2>
+        <div class="tarjetas-contacto">
+            <div class="tarjeta-contacto">
+                <img src="86C95622-7B80-4D40-A5E8-D80DA5F4BFEE.png" alt="Foto de Valentina Grajales Cardozo">
+                <h3>Valentina Grajales Cardozo</h3>
+                <p>Encargada de la organización y desarrollo del proyecto VITALIA. Su función es aportar ideas y ayudar a construir el contenido de la página.</p>
+            </div>
+            <div class="tarjeta-contacto">
+                <img src="8B55B55A-2270-4B3B-8068-CB4117AD3BBC.png" alt="Foto de Manuela Salgado Gonzalez">
+                <h3>Manuela Salgado Gonzalez</h3>
+                <p>Encargada de investigar y seleccionar información relacionada con el bienestar, el cuidado personal y los hábitos saludables.</p>
+            </div>
+            <div class="tarjeta-contacto">
+                <img src="IMG_2320.jpeg" alt="Foto de Isabella Mosquera Florez">
+                <h3>Isabella Mosquera Florez</h3>
+                <p>Encargada del diseño y presentación visual de la página, buscando que la información sea clara, agradable y fácil de encontrar.</p>
+            </div>
+            <div class="tarjeta-contacto">
+                <img src="B3D5F433-C73C-483B-92F0-7C2D03B052A6.jpeg" alt="Foto de Sofia Alvarez Agudelo">
+                <h3>Sofia Alvarez Agudelo</h3>
+                <p>Encargada de apoyar la creación de contenidos y revisar que la información presentada cumpla con los objetivos del proyecto.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="ubicacion">
+        <h2><i class="fa-solid fa-location-dot"></i> Nuestra ubicación</h2>
+        <div class="mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.856745412174!2d-75.5755271250058!3d6.282555625916398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428d63a4c5f53%3A0x9781208715f7436d!2sI.E.%20Dinamarca!5e0!3m2!1ses-419!2sco!4v1789068189908!5m2!1ses-419!2sco"
+                title="Ubicación de la Institución Educativa Dinamarca"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+        </div>
+    </section>
+
+    <section class="encuesta" id="encuesta">
+        <h2><i class="fa-solid fa-clipboard-list"></i> Encuesta</h2>
+        <p>Queremos conocer tu opinión sobre nuestro proyecto VITALIA. Completa los siguientes datos y comparte tus ideas con nosotras.</p>
+        
+        <form action="registro.php" name="estudiantes" method="POST" class="formulario">
+            <table border="0" align="center" width="100%">
+                <tr>
+                    <td><label for="nombre">Nombre completo:</label></td>
+                    <td><input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre completo" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="edad">Edad:</label></td>
+                    <td><input type="number" name="edad" id="edad" placeholder="Ingresa tu edad" min="1" max="100" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="correo">Correo electrónico:</label></td>
+                    <td><input type="email" name="correo" id="correo" placeholder="ejemplo@correo.com" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="comentario">Comentario:</label></td>
+                    <td><textarea name="comentario" id="comentario" placeholder="Escribe tu opinión sobre VITALIA..." required></textarea></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="center"><input type="submit" name="enviar" id="enviar" value="Enviar encuesta" /></td>
+                    <td align="center"><input type="reset" name="borrar" id="borrar" value="Restablecer" /></td>
+                </tr>
+            </table>
+        </form>
+    </section>
+
+    <div class="regresar">
+        <a href="Vitalia.html"><i class="fa-solid fa-arrow-left"></i> Volver al inicio</a>
+    </div>
+
+    <footer id="contacto">
+        <p>© 2026 VITALIA | El arte de cuidarte</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VITALIA | Vida Saludable</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+
+        /* =========================
+           ESTILOS GENERALES
+        ========================== */
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ECE9E4;
+            color: #333;
+        }
+
+
+        /* =========================
+           ENCABEZADO
+        ========================== */
+
+       header{
+    background:#F4B39A;
+    padding:30px;
+    text-align:center;
+    position:relative;
+}
+
+header h1 img{
+    margin-left:620px;
+    color:white;
+    font-size:250px;
+    letter-spacing:5px;
+}
+
+header p{
+    margin-top:70px;
+    font-style:italic;
+    color:white;
+    font-size:18px;
+}
+
+header img{
+    position:absolute;
+    top:-10px;
+    left:70px;
+    width:200px;
+}
+
+
+        /* =========================
+           MENÚ
+        ========================== */
+
+        nav {
+            background: #A95C59;
+            height: 42px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 35px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #F4B39A;
+        }
+
+
+        /* =========================
+           TÍTULO PRINCIPAL
+        ========================== */
+
+        .titulo {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        .titulo h2 {
+            color: #A95C59;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .titulo p {
+            font-size: 18px;
+            max-width: 850px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           TARJETAS
+        ========================== */
+
+        .contenedor {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .tarjeta {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+            transition: 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+        }
+
+        .tarjeta i {
+            font-size: 45px;
+            color: #A95C59;
+            margin-bottom: 15px;
+        }
+
+        .tarjeta h3 {
+            color: #A95C59;
+        }
+
+        .tarjeta p {
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           RUTINAS SALUDABLES
+        ========================== */
+
+        .rutinas {
+            max-width: 1000px;
+            margin: 30px auto 50px;
+            padding: 20px;
+        }
+
+        .rutinas h2 {
+            text-align: center;
+            color: #A95C59;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+
+        /* CADA RUTINA */
+
+        .rutina {
+            background: white;
+            margin-bottom: 20px;
+            padding: 25px;
+
+            border-left: 7px solid #A95C59;
+            border-radius: 10px;
+
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+
+        /* IMÁGENES DE LAS RUTINAS */
+
+        .rutina img {
+            width: 300px;
+            height: 220px;
+
+            object-fit: cover;
+
+            border-radius: 10px;
+
+            flex-shrink: 0;
+        }
+
+
+        /* CONTENIDO DE CADA RUTINA */
+
+        .rutina-contenido {
+            flex: 1;
+        }
+
+        .rutina h3 {
+            color: #A95C59;
+            margin-top: 0;
+        }
+
+        .rutina ul {
+            line-height: 2;
+            padding-left: 20px;
+        }
+
+
+        /* =========================
+           CONSEJOS
+        ========================== */
+
+        .consejos {
+            background: #F4B39A;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .consejos h2 {
+            color: white;
+        }
+
+        .consejos p {
+            max-width: 800px;
+            margin: 10px auto;
+            color: white;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           PIE DE PÁGINA
+        ========================== */
+
+        footer {
+            background: #A95C59;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+
+        /* =========================
+           DISEÑO PARA CELULAR
+        ========================== */
+
+        @media (max-width: 800px) {
+
+            header {
+                height: 170px;
+            }
+
+            header .logo {
+                position: relative;
+                left: 0;
+                top: 0;
+                width: 90px;
+                height: 80px;
+                margin-bottom: 5px;
+            }
+
+            header h1 img {
+                width: 150px;
+            }
+
+            nav {
+                height: auto;
+                padding: 12px;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .contenedor {
+                grid-template-columns: 1fr;
+            }
+
+            .titulo h2 {
+                font-size: 32px;
+            }
+
+
+            /* RUTINAS EN CELULAR */
+
+            .rutina {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .rutina img {
+                width: 100%;
+                max-width: 350px;
+                height: 220px;
+            }
+
+            .rutina ul {
+                text-align: left;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header>
+
+        <!-- LOGO IZQUIERDO -->
+
+        <img
+            class="logo"
+            src="LOGUITO.png"
+            alt="Logo de VITALIA"
+        >
+
+
+        <!-- VITALIA CENTRADO -->
+
+        <h1>
+
+            <img
+                src="VITA.png"
+                alt="VITALIA"
+            >
+
+        </h1>
+
+
+        <!-- FRASE -->
+
+        <p>
+            "El arte de cuidarte"
+        </p>
+
+    </header>
+
+
+    <!-- =========================
+         MENÚ
+    ========================== -->
+
+    <nav>
+
+        <a href="Vitalia.html">
+            Inicio
+        </a>
+
+        <a href="cuidado.html">
+            Cuidado Personal
+        </a>
+
+        <a href="Bienestar.html">
+            Bienestar
+        </a>
+
+        <a href="VidaSaludable.html">
+            Vida Saludable
+        </a>
+
+        <a href="Contactos.html">
+            Contacto
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         TÍTULO
+    ========================== -->
+
+    <section class="titulo">
+
+        <h2>
+            Vida Saludable
+        </h2>
+
+        <p>
+            Adoptar hábitos saludables ayuda a mantener un equilibrio
+            entre el cuerpo, la mente y las actividades diarias.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         HÁBITOS SALUDABLES
+    ========================== -->
+
+    <section class="contenedor">
+
+
+        <!-- ACTIVIDAD FÍSICA -->
+
+        <div class="tarjeta">
+
+            <i class="fa-solid fa-person-running"></i>
+
+            <h3>
+                Actividad física
+            </h3>
+
+            <p>
+                Mantenerse activo ayuda a fortalecer el cuerpo,
+                mejorar la energía y favorecer el bienestar general.
+            </p>
+
+        </div>
+
+
+        <!-- ALIMENTACIÓN -->
+
+        <div class="tarjeta">
+
+            <i class="fa-solid fa-apple-whole"></i>
+
+            <h3>
+                Alimentación equilibrada
+            </h3>
+
+            <p>
+                Una alimentación variada aporta los nutrientes
+                que el cuerpo necesita para funcionar correctamente.
+            </p>
+
+        </div>
+
+
+        <!-- DESCANSO -->
+
+        <div class="tarjeta">
+
+            <i class="fa-solid fa-bed"></i>
+
+            <h3>
+                Buen descanso
+            </h3>
+
+            <p>
+                Dormir y descansar adecuadamente ayuda a recuperar
+                energía y mantener un buen rendimiento durante el día.
+            </p>
+
+        </div>
+
+
+        <!-- HIDRATACIÓN -->
+
+        <div class="tarjeta">
+
+            <i class="fa-solid fa-glass-water"></i>
+
+            <h3>
+                Hidratación
+            </h3>
+
+            <p>
+                Beber suficiente agua durante el día es importante
+                para mantener una buena hidratación.
+            </p>
+
+        </div>
+
+
+        <!-- BIENESTAR MENTAL -->
+
+        <div class="tarjeta">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>
+                Bienestar mental
+            </h3>
+
+            <p>
+                Dedicar tiempo para relajarse, organizar las actividades
+                y expresar las emociones también forma parte del autocuidado.
+            </p>
+
+        </div>
+
+
+        <!-- TIEMPO ACTIVO -->
+
+        <div class="tarjeta">
+
+            <i class="fa-solid fa-person-walking"></i>
+
+            <h3>
+                Tiempo activo
+            </h3>
+
+            <p>
+                Caminar, bailar, jugar o realizar actividades que disfrutes
+                puede ayudarte a mantenerte activo durante el día.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RUTINAS SALUDABLES
+    ========================== -->
+
+    <section class="rutinas">
+
+        <h2>
+            Rutinas saludables
+        </h2>
+
+
+        <!-- =========================
+             RUTINA DE LA MAÑANA
+        ========================== -->
+
+        <div class="rutina">
+
+            <img
+                src="morning-routine.jpg"
+                alt="Rutina de la mañana"
+            >
+
+            <div class="rutina-contenido">
+
+                <h3>
+                    🌅 Rutina de la mañana
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Levantarse y comenzar el día con calma.
+                    </li>
+
+                    <li>
+                        Tomar agua.
+                    </li>
+
+                    <li>
+                        Realizar algunos estiramientos o movimiento suave.
+                    </li>
+
+                    <li>
+                        Tomar un desayuno equilibrado.
+                    </li>
+
+                    <li>
+                        Organizar las actividades del día.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             RUTINA DEL DÍA
+        ========================== -->
+
+        <div class="rutina">
+
+            <img
+                src="afternoon-routine.jpg"
+                alt="Rutina durante el día"
+            >
+
+            <div class="rutina-contenido">
+
+                <h3>
+                    ☀️ Rutina durante el día
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Mantenerse hidratado.
+                    </li>
+
+                    <li>
+                        Realizar pausas activas durante períodos largos de estudio.
+                    </li>
+
+                    <li>
+                        Comer de forma variada y equilibrada.
+                    </li>
+
+                    <li>
+                        Realizar alguna actividad física que resulte agradable.
+                    </li>
+
+                    <li>
+                        Dedicar un momento para descansar y relajarse.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             RUTINA DE LA NOCHE
+        ========================== -->
+
+        <div class="rutina">
+
+            <img
+                src="night-routine.jpg"
+                alt="Rutina de la noche"
+            >
+
+            <div class="rutina-contenido">
+
+                <h3>
+                    🌙 Rutina de la noche
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Organizar las cosas necesarias para el día siguiente.
+                    </li>
+
+                    <li>
+                        Disminuir el uso de pantallas antes de dormir.
+                    </li>
+
+                    <li>
+                        Realizar una actividad tranquila.
+                    </li>
+
+                    <li>
+                        Mantener horarios de sueño regulares.
+                    </li>
+
+                    <li>
+                        Prepararse para descansar adecuadamente.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONSEJOS
+    ========================== -->
+
+    <section class="consejos">
+
+        <h2>
+            Consejos para una vida saludable
+        </h2>
+
+        <p>
+            Recuerda que cuidar de ti mismo consiste en mantener buenos
+            hábitos, descansar, alimentarte de manera equilibrada,
+            mantenerte activo y dedicar tiempo a tu bienestar.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 VITALIA | El arte de cuidarte
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
